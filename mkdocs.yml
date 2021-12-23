@@ -91,6 +91,7 @@ extra:
   analytics:
     provider: google
     property: G-Y72V3MRN5X
+  disqus: roel4ez-blog
 
 copyright: "Copyright &copy; 2022 roel4ez"
 
