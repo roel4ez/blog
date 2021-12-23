@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#new-repo" class="md-skip">
+        <a href="#background" class="md-skip">
           Skip to content
         </a>
       
@@ -373,8 +373,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-repo" class="md-nav__link">
-    New repo
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
   </a>
   
 </li>
@@ -448,8 +455,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-repo" class="md-nav__link">
-    New repo
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
   </a>
   
 </li>
@@ -510,9 +524,29 @@ as the main headline.
         </div>
     
 
-    <h2 id="new-repo">New repo</h2>
-<p>I created a new repo on github which contains a Github Action to turn on/off or
-deallocate a VM on Azure</p>
+    <h2 id="background">Background</h2>
+<p>In one of the <a href="https://github.com/Azure/iotedge-lorawan-starterkit">projects</a>
+I'm involved in, there was the need to let a GitHub Action automatically turn on
+or off an Azure VM in the pipeline. The VM is required for running the full
+end-to-end test suite, but we don't want to have it running the whole time since
+it incurs a considerate costs if it is just idling away.</p>
+<h2 id="solution">Solution</h2>
+<p>To enable this functionality, I created a reusable GitHub Action that can be
+integrated in any other pipeline: <a href="https://github.com/marketplace/actions/power-on-off-or-deallocate-a-specific-azure-vm">Power ON/OFF or DEALLOCATE a specific Azure VM</a></p>
+<p>It is very easy to use, just add step to any job in your Action:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">steps</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Power Azure VM</span>
+    <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">roel4ez/action-power-on-off-azure-vm@v1.0.1</span>
+    <span class="nt">with</span><span class="p">:</span>
+        <span class="nt">AZURE_VM_NAME</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;VM_NAME&gt;</span>
+        <span class="nt">AZURE_RG_NAME</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;RESOURCE_GROUP_NAME&gt;</span>
+        <span class="nt">POWER_SWITCH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;ON/OFFDEALLOCATE&gt;</span>
+        <span class="nt">AZURE_SP_CLIENTID</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_CLIENTID }}</span>
+        <span class="nt">AZURE_SP_SECRET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_SECRET }}</span>
+        <span class="nt">AZURE_TENANTID</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_TENANTID }}</span>
+</code></pre></div>
+<p>For more info, refer to the <a href="https://github.com/marketplace/actions/power-on-off-or-deallocate-a-specific-azure-vm">README</a> or have a look at the <a href="https://github.com/roel4ez/action-power-on-off-azure-vm">code</a> yourself.
+Let me know what you think!</p>
 
     <!-- Last update of source file -->
     
@@ -522,7 +556,7 @@ deallocate a VM on Azure</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-23T18:21:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-23T19:56:20+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-23</span>
       
         <br>
         Created:
