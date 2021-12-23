@@ -1,0 +1,96 @@
+site_name: roel4ez | Blog
+site_author: roel4ez
+
+theme: 
+  name: material
+  custom_dir: overrides
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github-alt
+  features:
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    # - navigation.expand
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+   # - header.autohide
+   # - toc.integrate
+
+repo_name: roel4ez/blog
+repo_url: https://github.com/roel4ez/blog
+#edit_uri: edit/main/
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - abbr
+  - pymdownx.snippets
+  - meta
+  - toc
+
+plugins:
+  - search
+  - blogging:
+      features:
+        tags:
+          index_page: tags.md
+      dirs:
+        - blog
+      theme: 
+        name: card
+  - git-revision-date-localized:
+      type: timeago
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+extra_css:
+  - stylesheets/custom.css
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.css
+extra_javascript:
+  - javascript/extra.js
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
+nav:
+  - index.md
+  - 'Blog':
+    - blog/github-action-turn-on-off-vm.md
+    - blog/mkdocs-mike-ghpages.md
+  - tags.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/roel4ez
+      name: roel4ez on GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/roel4ez
+      name: roel4ez on Twitter
+  analytics:
+    provider: google
+    property: G-Y72V3MRN5X
+
+copyright: "Copyright &copy; 2022 roel4ez"
+
