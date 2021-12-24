@@ -674,9 +674,9 @@ as the main headline.
         </div>
     
 
-    <p>Documentation. Developers either love it or hate it. <em>Love it</em> when it is
+    <p>Documentation. Developers either love it or hate it. <strong>Love it</strong> when it is
 available when they are trying to use the latest and greatest framework (guilty!),
-or <em>hate it</em> when they have to write it themselves.</p>
+or <strong>hate it</strong> when they have to write it themselves.</p>
 <p>Luckily there are some really nice tools out there to manage the documentation
 for your projects. <a href="https://dotnet.github.io/docfx/">DocFX</a> is one of them, this
 is the engine that is running the <a href="https://docs.microsoft.com/en-us/">docs.microsoft.com</a>
@@ -724,23 +724,26 @@ Run <code>docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-mate
 in the root directory of the docs to get a copy running on <code>http://localhost:8000</code>.
 You can change the port in the <code>docker run</code> command if needed.</p>
 <!-- markdownlint-disable MD046 -->
-<p>!!! warning "Required extensions"
-    We are using extensions which are not supported by the mkdocs-material
-    container out-of-the-box. There are two ways to deal with this:  </p>
-<div class="highlight"><pre><span></span><code>1. use the [manual approach](#alternate-approach)
-2. Create a [custom docker image](https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker) with the plugin installed:
+<div class="admonition warning">
+<p class="admonition-title">Required extensions</p>
+<p>If you are using extensions which are not supported by the mkdocs-material
+container out-of-the-box, you have two ways to deal with this:  </p>
+<ol>
+<li>use the <a href="#alternate-approach">manual approach</a></li>
+<li>Create a <a href="https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker">custom docker image</a> with the plugin installed:  </li>
+</ol>
+<div class="highlight"><span class="filename">Dockerfile</span><pre><span></span><code><span class="k">FROM</span> <span class="s">squidfunk/mkdocs-material</span>
+<span class="k">RUN</span> pip install mdx_truly_sane_lists
 
-```dockerfile title=&quot;Dockerfile&quot;
-FROM squidfunk/mkdocs-material
-RUN pip install mdx_truly_sane_lists
-```
-
-```bash title=&quot;Build and run container&quot;
-# in the directory where your dockerfile is
-docker build . -t mkdocs-material-with-extensions
-docker run --rm -it -p 8000:8000 -v ${PWD}:/docs mkdocs-material-with-extensions
-```
+<span class="c"># or copy your requirements.txt</span>
+<span class="k">COPY</span> requirements.txt .
+<span class="k">RUN</span> pip install -r requirements.txt
 </code></pre></div>
+<div class="highlight"><span class="filename">Build and run container</span><pre><span></span><code><span class="c1"># in the directory where your dockerfile is</span>
+docker build . -t mkdocs-material-with-extensions
+docker run --rm -it -p <span class="m">8000</span>:8000 -v <span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>:/docs mkdocs-material-with-extensions
+</code></pre></div>
+</div>
 <!-- markdownlint-enable MD046 -->
 
 <h4 id="alternate-approach">Alternate approach</h4>
@@ -761,8 +764,10 @@ structure of your documentation page.</p>
 </ol>
 <p>So let's do this: once you have something working locally, you can create a GitHub
 Action to do all the work for your. Luckily, <code>mkdocs</code> comes with a <a href="https://www.mkdocs.org/user-guide/deploying-your-docs/#github-pages">feature</a>
-to help us out: <code>mkdocs gh-deploy</code>. This means the action would look something
-like this:</p>
+to help us out: <code>mkdocs gh-deploy</code>. This command will push to a branch called
+<code>gh-pages</code>, which is the default branch GitHub uses to host the files for the
+GitHub Pages (it's also an orphaned branch by the way). This means the action
+would look something like this:</p>
 <div class="highlight"><pre><span></span><code>name: deploy 
 on:
   push:
@@ -810,7 +815,7 @@ including versioning.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-24T09:51:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-24T11:27:31+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-24</span>
       
         <br>
         Created:
