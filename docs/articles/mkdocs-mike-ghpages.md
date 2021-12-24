@@ -15,18 +15,21 @@ available when they are trying to use the latest and greatest framework (guilty!
 or _hate it_ when they have to write it themselves.
 
 Luckily there are some really nice tools out there to manage the documentation
-for your projects. [DocFX]() is one of them, this is the engine that is running
-the [docs.microsoft.com]() sites.
+for your projects. [DocFX](https://dotnet.github.io/docfx/) is one of them, this
+is the engine that is running the [docs.microsoft.com](https://docs.microsoft.com/en-us/)
+sites.
 
-However, this article is about [mkdocs](). This is a neat little tool that can
-help you create a static site for your documentation. And it integrates nicely
-with GitHub Pages. Let's have a look at how to set up documentation with mkdocs
-and mkdocs-material. Later we'll have a look at using [mike]() to manage versions.
+However, this article is about [mkdocs](https://www.mkdocs.org/). This is a neat
+little tool that can help you create a static site for your documentation. And it
+integrates nicely with GitHub Pages. Let's have a look at how to set up
+documentation with mkdocs and mkdocs-material. Later we'll have a look at using
+[mike](https://github.com/jimporter/mike) to manage versions.
 
 ## Requirements
 
 First of all you'll need Python on your machine, because this is what powers the
-whole thing. So go ahead and [install that]() and also install [pip]() while you are
+whole thing. So go ahead and [install that](https://realpython.com/installing-python/)
+and also install [pip](https://pip.pypa.io/en/stable/installation/) while you are
 at it. Once you have this, you can install the prerequisites:
 
 ```bash
@@ -45,7 +48,8 @@ inclined to create a `/docs` folder there and start dumping your `md` files ther
 However, I recommend to keep your docs in a separate repository, so it can be
 maintained and managed individually (e.g. permissions). You do not need to setup
 a new GitHub repository for that, you can instead create a [detached branch](https://stackoverflow.com/questions/19980631/what-is-git-checkout-orphan-used-for)
-or [orphan branch](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnewbranchgt), called `docs/main` for example:
+or [orphan branch](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnewbranchgt)
+, called `docs/main` for example:
 
 ```bash
 git checkout docs/main --orphan
