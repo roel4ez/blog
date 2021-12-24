@@ -41,6 +41,9 @@ repo_url: https://github.com/roel4ez/blog
 #edit_uri: edit/main/
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.superfences:

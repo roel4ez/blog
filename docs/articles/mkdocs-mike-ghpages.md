@@ -10,9 +10,9 @@ tags:
 title: Awesome documentation with mkdocs and GitHub Pages
 ---
 
-Documentation. Developers either love it or hate it. _Love it_ when it is
+Documentation. Developers either love it or hate it. **Love it** when it is
 available when they are trying to use the latest and greatest framework (guilty!),
-or _hate it_ when they have to write it themselves.
+or **hate it** when they have to write it themselves.
 
 Luckily there are some really nice tools out there to manage the documentation
 for your projects. [DocFX](https://dotnet.github.io/docfx/) is one of them, this
@@ -80,8 +80,8 @@ You can change the port in the `docker run` command if needed.
 
 <!-- markdownlint-disable MD046 -->
 !!! warning "Required extensions"
-    We are using extensions which are not supported by the mkdocs-material
-    container out-of-the-box. There are two ways to deal with this:  
+    If you are using extensions which are not supported by the mkdocs-material
+    container out-of-the-box, you have two ways to deal with this:  
 
     1. use the [manual approach](#alternate-approach)
     2. Create a [custom docker image](https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker) with the plugin installed:  
@@ -89,6 +89,10 @@ You can change the port in the `docker run` command if needed.
     ```dockerfile title="Dockerfile"
     FROM squidfunk/mkdocs-material
     RUN pip install mdx_truly_sane_lists
+
+    # or copy your requirements.txt
+    COPY requirements.txt .
+    RUN pip install -r requirements.txt
     ```
 
     ```bash title="Build and run container"
@@ -123,8 +127,10 @@ GitHub has two cool features we can leverage for our documentation:
 
 So let's do this: once you have something working locally, you can create a GitHub
 Action to do all the work for your. Luckily, `mkdocs` comes with a [feature](https://www.mkdocs.org/user-guide/deploying-your-docs/#github-pages)
-to help us out: `mkdocs gh-deploy`. This means the action would look something
-like this:
+to help us out: `mkdocs gh-deploy`. This command will push to a branch called
+`gh-pages`, which is the default branch GitHub uses to host the files for the
+GitHub Pages (it's also an orphaned branch by the way). This means the action
+would look something like this:
 
 ```yml
 name: deploy 
