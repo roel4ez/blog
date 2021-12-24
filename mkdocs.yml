@@ -1,5 +1,6 @@
 site_name: roel4ez | Blog
 site_author: roel4ez
+site_url: https://roel4ez.github.io/blog
 
 theme: 
   name: material
@@ -8,14 +9,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue grey
+      primary: teal
       accent: blue
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue grey
+      primary: teal
       accent: blue
       toggle:
         icon: material/toggle-switch
@@ -26,6 +27,7 @@ theme:
     - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.sections
+    #- navigation.indexes
     - navigation.top
     # - navigation.expand
     - navigation.tracking
@@ -58,7 +60,7 @@ plugins:
         tags:
           index_page: tags.md
       dirs:
-        - blog
+        - articles
       theme: 
         name: card
   - git-revision-date-localized:
@@ -74,10 +76,10 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 
 nav:
-  - index.md
+  - 'Home': index.md
   - 'Blog':
-    - blog/github-action-turn-on-off-vm.md
-    - blog/mkdocs-mike-ghpages.md
+    - articles/github-action-turn-on-off-vm.md
+    - articles/mkdocs-mike-ghpages.md
   - tags.md
 
 extra:
