@@ -678,15 +678,18 @@ as the main headline.
 available when they are trying to use the latest and greatest framework (guilty!),
 or <em>hate it</em> when they have to write it themselves.</p>
 <p>Luckily there are some really nice tools out there to manage the documentation
-for your projects. <a href="">DocFX</a> is one of them, this is the engine that is running
-the <a href="">docs.microsoft.com</a> sites.</p>
-<p>However, this article is about <a href="">mkdocs</a>. This is a neat little tool that can
-help you create a static site for your documentation. And it integrates nicely
-with GitHub Pages. Let's have a look at how to set up documentation with mkdocs
-and mkdocs-material. Later we'll have a look at using <a href="">mike</a> to manage versions.</p>
+for your projects. <a href="https://dotnet.github.io/docfx/">DocFX</a> is one of them, this
+is the engine that is running the <a href="https://docs.microsoft.com/en-us/">docs.microsoft.com</a>
+sites.</p>
+<p>However, this article is about <a href="https://www.mkdocs.org/">mkdocs</a>. This is a neat
+little tool that can help you create a static site for your documentation. And it
+integrates nicely with GitHub Pages. Let's have a look at how to set up
+documentation with mkdocs and mkdocs-material. Later we'll have a look at using
+<a href="https://github.com/jimporter/mike">mike</a> to manage versions.</p>
 <h2 id="requirements">Requirements</h2>
 <p>First of all you'll need Python on your machine, because this is what powers the
-whole thing. So go ahead and <a href="">install that</a> and also install <a href="">pip</a> while you are
+whole thing. So go ahead and <a href="https://realpython.com/installing-python/">install that</a>
+and also install <a href="https://pip.pypa.io/en/stable/installation/">pip</a> while you are
 at it. Once you have this, you can install the prerequisites:</p>
 <div class="highlight"><pre><span></span><code>- pip install mkdocs
 - pip install mkdocs-material
@@ -700,7 +703,8 @@ inclined to create a <code>/docs</code> folder there and start dumping your <cod
 However, I recommend to keep your docs in a separate repository, so it can be
 maintained and managed individually (e.g. permissions). You do not need to setup
 a new GitHub repository for that, you can instead create a <a href="https://stackoverflow.com/questions/19980631/what-is-git-checkout-orphan-used-for">detached branch</a>
-or <a href="https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnewbranchgt">orphan branch</a>, called <code>docs/main</code> for example:</p>
+or <a href="https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnewbranchgt">orphan branch</a>
+, called <code>docs/main</code> for example:</p>
 <div class="highlight"><pre><span></span><code>git checkout docs/main --orphan
 </code></pre></div>
 <p>If you want to have <code>dev</code> branch and <code>docs</code> branch side by side, try out 
@@ -806,7 +810,7 @@ including versioning.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-24T09:36:01+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-24T09:51:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-24</span>
       
         <br>
         Created:
