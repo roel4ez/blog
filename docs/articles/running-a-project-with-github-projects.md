@@ -1,5 +1,6 @@
 ---
-title: Managing a project with the new GitHub Projectsauthor: Roel Fauconnier
+title: Managing a project with the new GitHub Projects
+author: Roel Fauconnier
 author_gh_user: roel4ez
 read_time: 5min
 publish_date: 07-jan-2022
