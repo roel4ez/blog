@@ -55,6 +55,8 @@ markdown_extensions:
   - pymdownx.snippets
   - meta
   - toc
+  - attr_list
+  - md_in_html
 
 plugins:
   - search
@@ -83,6 +85,7 @@ nav:
   - 'Blog':
     - articles/github-action-turn-on-off-vm.md
     - articles/mkdocs-mike-ghpages.md
+    - articles/running-a-project-with-github-projects.md
   - tags.md
 
 extra:
