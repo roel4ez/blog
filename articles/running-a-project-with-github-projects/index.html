@@ -646,14 +646,14 @@ as the main headline.
     
 
     <p>The new GitHub Projects experience is in <a href="https://docs.github.com/en/issues/trying-out-the-new-projects-experience">public beta</a>
-for everyone to enjoy and use. You should be able to go ahead and createb a new
+for everyone to enjoy and use. You should be able to go ahead and create a new
 project:</p>
 <p><img alt="The new GitHub Projects experience" src="../../images/github-projects-new.png" /></p>
 <h2 id="using-it-on-a-real-project">Using it on a real project</h2>
 <p>Currently, I'm working a with a <a href="https://devblogs.microsoft.com/cse/">CSE DevCrew</a>
 on a public OSS project called <a href="https://github.com/Azure/iotedge-lorawan-starterkit">IoTEdge LoRaWAN StarterKit</a>.
 We were using "classic" GitHub projects in the past, but we've now moved to using
-the new beta experience. It's been a very great experience so far, and is slowly
+the new beta experience. It's been a very great experience so far, and it is slowly
 becoming a contender for AzureDevOps Boards or Jira.</p>
 <p>I'll list a few tips and tricks, as well as shortcomings and caveats, to learn
 how you could use this on your own projects.</p>
@@ -671,7 +671,14 @@ to fit the daily needs of the team:</p>
 <p>GitHub Issues have built-in support to track issues in other issues; in other words,
 it allows you to use some form of hierarchy in your items, the same as for example
 ADO or Jira would allow you to do. We choose to keep it simple and have 4 issue types:
-<strong>Epic</strong>, <strong>Feature</strong>, <strong>Story</strong> and <strong>Bug</strong>.</p>
+<strong>Epic</strong>, <strong>Feature</strong>, <strong>Story</strong> and <strong>Bug</strong>. We use labels to mark the issues,
+and I've created a custom field on the board called <code>Type</code> to be able to group-by
+and filter the issues on that field.</p>
+<div class="admonition note tip">
+<p class="admonition-title">Note</p>
+<p>When adding an item, you can automatically set the <code>Type</code> if you add the issue
+in the correct group.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">A note on Sprints</p>
 <p><img align="right" alt="Custom Field Iteration" src="../../images/github-projects-new-field-iteration.png" width="200" />
@@ -683,12 +690,12 @@ report that uses it to report the progress (more on that in a next post? Let me
 know in the comments if you're interested).</p>
 </div>
 <h2 id="different-views">Different Views</h2>
-<p>Different stackeholders of aproject require different views on your progress and
+<p>Different stackeholders of a project require different views on progress and
 status. That's why we ended up using these views:</p>
 <p><img alt="Overview of boards" src="../../images/github-projects-overview.png" /></p>
 <ul>
 <li><strong>All Items</strong>: overview of all items in the Product Backlog - grouped by issue type</li>
-<li>🪧<strong>Milestones</strong>: overview of issues per milestone</li>
+<li>🪧<strong>Milestones</strong>: overview of issues grouped by milestone</li>
 <li>🏃<strong>Current Sprint</strong>: Board of issues in the current sprint</li>
 <li>🪲<strong>Bugs</strong>: Board for triaging Bugs</li>
 <li>🟣<strong>Features</strong>: Board of Features for a high level overview</li>
@@ -715,7 +722,7 @@ each card, such as Linked Pull Request, Assignee and Labels</p>
 <p><img alt="Current Sprint Configuration" src="../../images/github-projects-sprint-config.png" width="350" />
 <img align="right" alt="Current Sprint Configuration" src="../../images/github-projects-sprint-pr.png" width="250" /></p>
 <h3 id="no-milestone">No Milestone</h3>
-<p>As mentioned before, this board is used for triaging new issues. AS part of the
+<p>As mentioned before, this board is used for triaging new issues. As part of the
 process, when someone creates an issue they will add it to the board, but <em>not</em>
 set a milestone. This results in the status being set to <em>Triage</em> and it will
 show up on this board. We then discuss each issue in the daily, and choose to
@@ -754,7 +761,7 @@ think!</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-01-07T14:49:58+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-01-07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-01-07T14:57:07+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-01-07</span>
       
         <br>
         Created:
