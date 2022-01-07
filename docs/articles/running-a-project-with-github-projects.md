@@ -11,7 +11,7 @@ tags:
 ---
 
 The new GitHub Projects experience is in [public beta](https://docs.github.com/en/issues/trying-out-the-new-projects-experience)
-for everyone to enjoy and use. You should be able to go ahead and createb a new
+for everyone to enjoy and use. You should be able to go ahead and create a new
 project:
 
 ![The new GitHub Projects experience](../images/github-projects-new.png)
@@ -21,7 +21,7 @@ project:
 Currently, I'm working a with a [CSE DevCrew](https://devblogs.microsoft.com/cse/)
 on a public OSS project called [IoTEdge LoRaWAN StarterKit](https://github.com/Azure/iotedge-lorawan-starterkit).
 We were using "classic" GitHub projects in the past, but we've now moved to using
-the new beta experience. It's been a very great experience so far, and is slowly
+the new beta experience. It's been a very great experience so far, and it is slowly
 becoming a contender for AzureDevOps Boards or Jira.
 
 I'll list a few tips and tricks, as well as shortcomings and caveats, to learn
@@ -43,7 +43,13 @@ to fit the daily needs of the team:
 GitHub Issues have built-in support to track issues in other issues; in other words,
 it allows you to use some form of hierarchy in your items, the same as for example
 ADO or Jira would allow you to do. We choose to keep it simple and have 4 issue types:
-**Epic**, **Feature**, **Story** and **Bug**.
+**Epic**, **Feature**, **Story** and **Bug**. We use labels to mark the issues,
+and I've created a custom field on the board called `Type` to be able to group-by
+and filter the issues on that field.
+
+!!! note Tip
+    When adding an item, you can automatically set the `Type` if you add the issue
+    in the correct group.
 
 !!! note "A note on Sprints"
 
@@ -57,13 +63,13 @@ ADO or Jira would allow you to do. We choose to keep it simple and have 4 issue 
 
 ## Different Views
 
-Different stackeholders of aproject require different views on your progress and
+Different stackeholders of a project require different views on progress and
 status. That's why we ended up using these views:
 
 ![Overview of boards](../images/github-projects-overview.png)
 
 - **All Items**: overview of all items in the Product Backlog - grouped by issue type
-- 🪧**Milestones**: overview of issues per milestone
+- 🪧**Milestones**: overview of issues grouped by milestone
 - 🏃**Current Sprint**: Board of issues in the current sprint
 - 🪲**Bugs**: Board for triaging Bugs
 - 🟣**Features**: Board of Features for a high level overview
@@ -97,7 +103,7 @@ each card, such as Linked Pull Request, Assignee and Labels
 
 ### No Milestone
 
-As mentioned before, this board is used for triaging new issues. AS part of the
+As mentioned before, this board is used for triaging new issues. As part of the
 process, when someone creates an issue they will add it to the board, but *not*
 set a milestone. This results in the status being set to *Triage* and it will
 show up on this board. We then discuss each issue in the daily, and choose to
