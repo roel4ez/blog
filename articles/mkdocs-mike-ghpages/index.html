@@ -484,6 +484,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-a-project-with-github-projects/" class="md-nav__link">
+        Running a project with github projects
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -732,12 +746,12 @@ container out-of-the-box, you have two ways to deal with this:  </p>
 <li>use the <a href="#alternate-approach">manual approach</a></li>
 <li>Create a <a href="https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker">custom docker image</a> with the plugin installed:  </li>
 </ol>
-<div class="highlight"><span class="filename">Dockerfile</span><pre><span></span><code><span class="k">FROM</span> <span class="s">squidfunk/mkdocs-material</span>
-<span class="k">RUN</span> pip install mdx_truly_sane_lists
+<div class="highlight"><span class="filename">Dockerfile</span><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">squidfunk/mkdocs-material</span>
+<span class="k">RUN</span><span class="w"> </span>pip install mdx_truly_sane_lists
 
 <span class="c"># or copy your requirements.txt</span>
-<span class="k">COPY</span> requirements.txt .
-<span class="k">RUN</span> pip install -r requirements.txt
+<span class="k">COPY</span><span class="w"> </span>requirements.txt .
+<span class="k">RUN</span><span class="w"> </span>pip install -r requirements.txt
 </code></pre></div>
 <div class="highlight"><span class="filename">Build and run container</span><pre><span></span><code><span class="c1"># in the directory where your dockerfile is</span>
 docker build . -t mkdocs-material-with-extensions
@@ -898,13 +912,13 @@ including versioning.</p>
       
       
         
-        <a href="../../tags/" class="md-footer__link md-footer__link--next" aria-label="Next: Tags" rel="next">
+        <a href="../running-a-project-with-github-projects/" class="md-footer__link md-footer__link--next" aria-label="Next: Running a project with github projects" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Tags
+              Running a project with github projects
             </div>
           </div>
           <div class="md-footer__button md-icon">

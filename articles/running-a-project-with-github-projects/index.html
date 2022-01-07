@@ -7,17 +7,17 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Roel Fauconnier">
+        <meta name="author" content="roel4ez">
       
       
-        <link rel="canonical" href="https://roel4ez.github.io/blog/articles/github-action-turn-on-off-vm/">
+        <link rel="canonical" href="https://roel4ez.github.io/blog/articles/running-a-project-with-github-projects/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Github Action for managing Azure VM - roel4ez | Blog</title>
+        <title>Running a project with github projects - roel4ez | Blog</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#background" class="md-skip">
+        <a href="#using-it-on-a-real-project" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github Action for managing Azure VM
+              Running a project with github projects
             
           </span>
         </div>
@@ -231,7 +231,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../github-action-turn-on-off-vm/" class="md-tabs__link md-tabs__link--active">
         Blog
       </a>
     </li>
@@ -343,55 +343,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Github Action for managing Azure VM
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../github-action-turn-on-off-vm/" class="md-nav__link">
         Github Action for managing Azure VM
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
-    Solution
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -415,11 +371,122 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../running-a-project-with-github-projects/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Running a project with github projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Running a project with github projects
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-it-on-a-real-project" class="md-nav__link">
+    Using it on a real project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-product-backlog" class="md-nav__link">
+    Creating a Product Backlog
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Product Backlog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-hierarchy" class="md-nav__link">
+    Issue Hierarchy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-views" class="md-nav__link">
+    Different Views
+  </a>
+  
+    <nav class="md-nav" aria-label="Different Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-sprint" class="md-nav__link">
+    Current Sprint
+  </a>
+  
+    <nav class="md-nav" aria-label="Current Sprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-milestone" class="md-nav__link">
+    No Milestone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-missing" class="md-nav__link">
+    What is missing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -471,15 +538,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
+  <a href="#using-it-on-a-real-project" class="md-nav__link">
+    Using it on a real project
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
-    Solution
+  <a href="#creating-a-product-backlog" class="md-nav__link">
+    Creating a Product Backlog
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Product Backlog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-hierarchy" class="md-nav__link">
+    Issue Hierarchy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-views" class="md-nav__link">
+    Different Views
+  </a>
+  
+    <nav class="md-nav" aria-label="Different Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-sprint" class="md-nav__link">
+    Current Sprint
+  </a>
+  
+    <nav class="md-nav" aria-label="Current Sprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-milestone" class="md-nav__link">
+    No Milestone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-missing" class="md-nav__link">
+    What is missing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
   </a>
   
 </li>
@@ -502,67 +636,115 @@ doesn't, the page title (or respectively site name) is used
 as the main headline.
 -->
 
-    <h1>Github Action for managing Azure VM</h1>
+    <h1>Running a project with github projects</h1>
 
 
 <!-- Markdown content -->
 
     
-    <aside class="mdx-author">
-        <p>
-        <img src="https://avatars.githubusercontent.com/roel4ez" alt="@roel4ez">
-        </p>
-        <p>
-        <span> 
-        <b>Roel Fauconnier</b> · <a href="https://github.com/roel4ez">@roel4ez</a>
-        </span>
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
-                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
-                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
-            </svg> 23-dec-2021 ·
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-            </svg> 5min read
-        </span>
-        </p>
-    </aside>
-    
 
     
-        <div class="tags">
-        
-            <a href="/blog/tags/#github-action" class="tag"><code>#github-action</code></a>
-        
-            <a href="/blog/tags/#azure" class="tag"><code>#azure</code></a>
-        
-        </div>
-    
 
-    <h2 id="background">Background</h2>
-<p>In one of the <a href="https://github.com/Azure/iotedge-lorawan-starterkit">projects</a>
-I'm involved in, there was the need to let a GitHub Action automatically turn on
-or off an Azure VM in the pipeline. The VM is required for running the full
-end-to-end test suite, but we don't want to have it running the whole time since
-it incurs a considerate costs if it is just idling away.</p>
-<h2 id="solution">Solution</h2>
-<p>To enable this functionality, I created a reusable GitHub Action that can be
-integrated in any other pipeline: <a href="https://github.com/marketplace/actions/power-on-off-or-deallocate-a-specific-azure-vm">Power ON/OFF or DEALLOCATE a specific Azure VM</a></p>
-<p>It is very easy to use, just add step to any job in your Action:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Power Azure VM</span><span class="w"></span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">roel4ez/action-power-on-off-azure-vm@v1.0.1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_VM_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;VM_NAME&gt;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_RG_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;RESOURCE_GROUP_NAME&gt;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">POWER_SWITCH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;ON/OFFDEALLOCATE&gt;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_SP_CLIENTID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_CLIENTID }}</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_SP_SECRET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_SECRET }}</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_TENANTID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_TENANTID }}</span><span class="w"></span>
-</code></pre></div>
-<p>For more info, refer to the <a href="https://github.com/marketplace/actions/power-on-off-or-deallocate-a-specific-azure-vm">README</a> or have a look at the <a href="https://github.com/roel4ez/action-power-on-off-azure-vm">code</a> yourself.
-Let me know what you think!</p>
+    <p>The new GitHub Projects experience is in <a href="https://docs.github.com/en/issues/trying-out-the-new-projects-experience">public beta</a>
+for everyone to enjoy and use. You should be able to go ahead and createb a new
+project:</p>
+<p><img alt="The new GitHub Projects experience" src="../../images/github-projects-new.png" /></p>
+<h2 id="using-it-on-a-real-project">Using it on a real project</h2>
+<p>Currently, I'm working a with a <a href="https://devblogs.microsoft.com/cse/">CSE DevCrew</a>
+on a public OSS project called <a href="https://github.com/Azure/iotedge-lorawan-starterkit">IoTEdge LoRaWAN StarterKit</a>.
+We were using "classic" GitHub projects in the past, but we've now moved to using
+the new beta experience. It's been a very great experience so far, and is slowly
+becoming a contender for AzureDevOps Boards or Jira.</p>
+<p>I'll list a few tips and tricks, as well as shortcomings and caveats, to learn
+how you could use this on your own projects.</p>
+<h2 id="creating-a-product-backlog">Creating a Product Backlog</h2>
+<p>We created a Milestone to capture our Product Backlog (in our case, this is more
+an Engagement Backlog), which we called aptly <code>January 2022</code>. I added all the
+items from this Milestone to the board, and got started with arranging the board
+to fit the daily needs of the team:</p>
+<ul>
+<li>a quick overview of what is in scope</li>
+<li>a board to manage the current sprint</li>
+<li>a board to triage new items during the daily</li>
+</ul>
+<h3 id="issue-hierarchy">Issue Hierarchy</h3>
+<p>GitHub Issues have built-in support to track issues in other issues; in other words,
+it allows you to use some form of hierarchy in your items, the same as for example
+ADO or Jira would allow you to do. We choose to keep it simple and have 4 issue types:
+<strong>Epic</strong>, <strong>Feature</strong>, <strong>Story</strong> and <strong>Bug</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">A note on Sprints</p>
+<p><img align="right" alt="Custom Field Iteration" src="../../images/github-projects-new-field-iteration.png" width="200" />
+We use Milestones to manage our sprints, and create a milestone for each sprint
+(typically a week in length). There is also the possibility to create a custom
+field for "Iteration", but we decided not to use it. The milestones allow us to
+have a decent history of what issues we tackeld when, and there is a PowerBI
+report that uses it to report the progress (more on that in a next post? Let me
+know in the comments if you're interested).</p>
+</div>
+<h2 id="different-views">Different Views</h2>
+<p>Different stackeholders of aproject require different views on your progress and
+status. That's why we ended up using these views:</p>
+<p><img alt="Overview of boards" src="../../images/github-projects-overview.png" /></p>
+<ul>
+<li><strong>All Items</strong>: overview of all items in the Product Backlog - grouped by issue type</li>
+<li>🪧<strong>Milestones</strong>: overview of issues per milestone</li>
+<li>🏃<strong>Current Sprint</strong>: Board of issues in the current sprint</li>
+<li>🪲<strong>Bugs</strong>: Board for triaging Bugs</li>
+<li>🟣<strong>Features</strong>: Board of Features for a high level overview</li>
+<li>📖<strong>Stories</strong>: Board of Stories</li>
+<li>❗<strong>No Milestone</strong>: Used for triaging new issues</li>
+</ul>
+<p>Most of them are pretty straight-forward, but I'll dive in to a few things here:</p>
+<h3 id="current-sprint">Current Sprint</h3>
+<p><img alt="Current Sprint Board" src="../../images/github-projects-sprint.png" /></p>
+<p>During the daily, the scrum lead uses this board to show an overview on how we are
+doing in the current sprint. Remember, a sprint is a milestone in our case, so
+I used the filter functionality to show only stories and bugs for the current
+milestone: <code>-type:feature milestone:&lt;name-of-your-milestone&gt;</code>. More on the filter
+syntax can be found in the <a href="https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests">GitHub Docs</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Milestone names</p>
+<p>We tend to use extensive names for our milestones, and they usually have a
+nice emoji as well. If you do this, you'll need to include that specific emoji
+in the search field! For example: <code>milestone:"my great milestone 🙈"</code></p>
+</div>
+<h4 id="configuration">Configuration</h4>
+<p>To make this board useful, I made sure all the relevant information is shown on
+each card, such as Linked Pull Request, Assignee and Labels</p>
+<p><img alt="Current Sprint Configuration" src="../../images/github-projects-sprint-config.png" width="350" />
+<img align="right" alt="Current Sprint Configuration" src="../../images/github-projects-sprint-pr.png" width="250" /></p>
+<h3 id="no-milestone">No Milestone</h3>
+<p>As mentioned before, this board is used for triaging new issues. AS part of the
+process, when someone creates an issue they will add it to the board, but <em>not</em>
+set a milestone. This results in the status being set to <em>Triage</em> and it will
+show up on this board. We then discuss each issue in the daily, and choose to
+assign it to either the Current Sprint, the Product Backlog or the VNext milestone.</p>
+<p><img alt="No Milestone Board" src="../../images/github-projects-triage.png" /></p>
+<h2 id="what-is-missing">What is missing</h2>
+<p>You might say "🤔 <em>this is great and all that, but I am missing feature X and Y and 
+I will keep using Jira/AzureDevOps/Zendesk/.."</em>, and you may be right. There are
+definitely some things missing for a true project management solution,
+but it is more than good enough for running short projects. Nevertheless, here
+are a some things that I didn't like, or would love to see added in the future:</p>
+<ul>
+<li><strong>Automatically add new issues to a board</strong>: currently this is only possible with
+external GitHub Apps. It would be great to be able to set this in the <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests">Issue Template</a></li>
+<li><strong>Ability to add multiple issues at once</strong>: there is no way to add a bunch of
+issues to the board at once, either via a query or multi-select + action dropdown.
+(For example, this is possible for milestones, directly from the "Issues" view)</li>
+<li><strong>Rules</strong>: I'd love to be able to set Rules for each column on the boards, for example:<ul>
+<li>An items cannot be <code>In Progress</code> without having a milestone</li>
+<li>Limit number of items in a column</li>
+</ul>
+</li>
+<li><strong>Visualize Hierarchy</strong>: there is no way to visuaize the full hierarchy of an
+Epic for example. I'd love to be able to see all Features under an Epic, and all
+Stories under a Feature, in one glance.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Go ahead and play around with these new GitHub Boards, and let me know what you
+think!</p>
 
     <!-- Last update of source file -->
     
@@ -572,11 +754,11 @@ Let me know what you think!</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-24T09:36:01+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-01-07T14:49:58+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-01-07</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-24T09:36:01+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-24</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-01-07T14:49:58+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-01-07</span>
       
     
   </small>
@@ -595,9 +777,9 @@ Let me know what you think!</p>
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function() {
-        this.page.url = "https://roel4ez.github.io/blog/articles/github-action-turn-on-off-vm/"
+        this.page.url = "https://roel4ez.github.io/blog/articles/running-a-project-with-github-projects/"
         this.page.identifier =
-            "articles/github-action-turn-on-off-vm/" 
+            "articles/running-a-project-with-github-projects/" 
 
         }
 
@@ -639,7 +821,7 @@ Let me know what you think!</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+        <a href="../mkdocs-mike-ghpages/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Awesome documentation with mkdocs and GitHub Pages" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -648,20 +830,20 @@ Let me know what you think!</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
+              Awesome documentation with mkdocs and GitHub Pages
             </div>
           </div>
         </a>
       
       
         
-        <a href="../mkdocs-mike-ghpages/" class="md-footer__link md-footer__link--next" aria-label="Next: Awesome documentation with mkdocs and GitHub Pages" rel="next">
+        <a href="../../tags/" class="md-footer__link md-footer__link--next" aria-label="Next: Tags" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Awesome documentation with mkdocs and GitHub Pages
+              Tags
             </div>
           </div>
           <div class="md-footer__button md-icon">
