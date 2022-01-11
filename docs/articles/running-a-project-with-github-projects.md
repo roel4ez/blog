@@ -22,8 +22,8 @@ project:
 Currently, I'm working a with a [CSE DevCrew](https://devblogs.microsoft.com/cse/)
 on a public OSS project called [IoTEdge LoRaWAN StarterKit](https://github.com/Azure/iotedge-lorawan-starterkit).
 We were using "classic" GitHub projects in the past, but we've now moved to using
-the new beta experience. It's been a very great experience so far, and it is slowly
-becoming a contender for AzureDevOps Boards or Jira.
+the new beta experience. It's been a very great experience so far, and it is quickly
+becoming a valid alternative for AzureDevOps Boards or Jira.
 
 I'll list a few tips and tricks, as well as shortcomings and caveats, to learn
 how you could use this on your own projects.
@@ -58,13 +58,13 @@ and filter the issues on that field.
     We use Milestones to manage our sprints, and create a milestone for each sprint
     (typically a week in length). There is also the possibility to create a custom
     field for "Iteration", but we decided not to use it. The milestones allow us to
-    have a decent history of what issues we tackeld when, and there is a PowerBI
+    have a decent history of what issues we tackled when, and there is a PowerBI
     report that uses it to report the progress (more on that in a next post? Let me
     know in the comments if you're interested).
 
 ## Different Views
 
-Different stackeholders of a project require different views on progress and
+Different stakeholders of a project require different views on progress and
 status. That's why we ended up using these views:
 
 ![Overview of boards](../images/github-projects-overview.png)
@@ -73,11 +73,11 @@ status. That's why we ended up using these views:
 - 🪧**Milestones**: overview of issues grouped by milestone
 - 🏃**Current Sprint**: Board of issues in the current sprint
 - 🪲**Bugs**: Board for triaging Bugs
-- 🟣**Features**: Board of Features for a high level overview
+- 🟣**Features**: Board of Features for a high-level overview
 - 📖**Stories**: Board of Stories
 - ❗**No Milestone**: Used for triaging new issues
 
-Most of them are pretty straight-forward, but I'll dive in to a few things here:
+Most of them are pretty straight-forward, but I'll dive into a few things here:
 
 ### Current Sprint
 
@@ -107,7 +107,7 @@ each card, such as Linked Pull Request, Assignee and Labels
 As mentioned before, this board is used for triaging new issues. As part of the
 process, when someone creates an issue they will add it to the board, but *not*
 set a milestone. This results in the status being set to *Triage* and it will
-show up on this board. We then discuss each issue in the daily, and choose to
+show up on this board. We then discuss each issue in the daily standup, and choose to
 assign it to either the Current Sprint, the Product Backlog or the VNext milestone.
 
 ![No Milestone Board](../images/github-projects-triage.png)
@@ -128,7 +128,7 @@ issues to the board at once, either via a query or multi-select + action dropdow
 - **Rules**: I'd love to be able to set Rules for each column on the boards, for example:
     - An items cannot be `In Progress` without having a milestone
     - Limit number of items in a column
-- **Visualize Hierarchy**: there is no way to visuaize the full hierarchy of an
+- **Visualize Hierarchy**: there is no way to visualize the full hierarchy of an
 Epic for example. I'd love to be able to see all Features under an Epic, and all
 Stories under a Feature, in one glance.
 
@@ -136,3 +136,5 @@ Stories under a Feature, in one glance.
 
 Go ahead and play around with these new GitHub Boards, and let me know what you
 think!
+
+--8<-- "includes/abbreviations.md"
