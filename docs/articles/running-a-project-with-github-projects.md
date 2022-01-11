@@ -124,9 +124,9 @@ are a some things that I didn't like, or would love to see added in the future:
 external GitHub Apps. It would be great to be able to set this in the [Issue Template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests)
 - **Ability to add multiple issues at once**: there is no way to add a bunch of
 issues to the board at once, either via a query or multi-select + action dropdown.
-(For example, this is possible for milestones, directly from the "Issues" view)
+(For example, this is already possible for milestones, directly from the "Issues" view)
 - **Rules**: I'd love to be able to set Rules for each column on the boards, for example:
-    - An items cannot be `In Progress` without having a milestone
+    - An item cannot be `In Progress` without having a milestone
     - Limit number of items in a column
 - **Visualize Hierarchy**: there is no way to visualize the full hierarchy of an
 Epic for example. I'd love to be able to see all Features under an Epic, and all
