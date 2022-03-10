@@ -848,35 +848,6 @@ including versioning.</p>
 
     <!-- Inject Disqus into current page -->
     
-    <h2 id="__comments">Comments</h2>
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function() {
-        this.page.url = "https://roel4ez.github.io/blog/articles/mkdocs-mike-ghpages/"
-        this.page.identifier =
-            "articles/mkdocs-mike-ghpages/" 
-
-        }
-
-        /* Set up for the first time */
-        if (typeof DISQUS === "undefined") {
-        var script = document.createElement("script")
-        script.async = true
-        script.src = "https://roel4ez-blog.disqus.com/embed.js"
-        script.setAttribute("data-timestamp", Date.now())
-
-        /* Inject script tag */
-        document.body.appendChild(script)
-
-        /* Set up on navigation (instant loading) */
-        } else {
-        DISQUS.reset({
-            reload: true,
-            config: disqus_config
-        })
-        }
-    </script>
-    
 
 
 
