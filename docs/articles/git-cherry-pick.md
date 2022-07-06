@@ -1,5 +1,5 @@
 ---
-title: Using `git cherry-pick` to optimize your PRs
+title: Using `git cherry-pick` [git 101]
 author: Roel Fauconnier
 author_gh_user: roel4ez
 read_time: 5min
@@ -12,13 +12,24 @@ tags:
     - pull-requests
 ---
 
+This is the first in a series of articles on using the git CLI to be productive
+in your day-to-day work. Also, when you are really stuck with git, refer to
+<https://ohshitgit.com> for quick help!
+
+## Creating a PR
+
 One of the main requests that OSS repository owners have when submitting PRs is
 that you use a small number of commits that fixes one specific issue. This is a 
 *good thing*™️, as it makes it easier for the maintainer to review the PR and make
 sure it can be merged without issues.
 
-But what happens when the feedback on your PR is: "Please separate this into two
-PRs". Great, now what? 🤔
+But what happens when the feedback on your PR is: 
+
+> LGTM, but it would be better to separate these changes into two PRs".
+
+ Great, now what? 🤔
+
+## Cherries 🍒
 
 No worries, this is where `git cherry-pick` comes to the rescue. The [official 
 documentation](https://git-scm.com/docs/git-cherry-pick) describes it as "Apply
@@ -65,22 +76,24 @@ gitGraph
     merge feature/my-bugfix-2
 ```
 
+## Show me the code
+
 Do you have to do everything again now? No, you can use `git cherry-pick` to
 setup your branches and create two new PRs:
 
 ```bash
 $ [main]> 
-    git checkout -b feature/my-bugfix-1
-    git cherry-pick C1
-    git push --set-upstream origin fix/my-bugfix-1
+    git checkout -b feature/my-bugfix-1             # Create a new branch for the C1 changes
+    git cherry-pick C1                              # Cherry-pick only commit C1
+    git push --set-upstream origin fix/my-bugfix-1  # Push the branch to the remote
 
-    git checkout main
-    git checkout -b feature/my-bugfix-2
-    git cherry-pick C2..C6
-    git push --set-upstream origin fix/my-bugfix-2
+    git checkout main                               # Switch to main branch, since we want to use the same base branch for the other changes
+    git checkout -b feature/my-bugfix-2             # Create a new branch for the C2 changes
+    git cherry-pick C2..C6                          # Cherry-pick commits C2 to C6                
+    git push --set-upstream origin fix/my-bugfix-2  # Push the branch to the remote
 
-    git push origin --delete feature/my-bugfix  # delete the old branch remotely
-    git branch -d feature/my-bugfix             # delete the old branch locally
+    git push origin --delete feature/my-bugfix      # delete the old branch remotely
+    git branch -d feature/my-bugfix                 # delete the old branch locally
 ```
 
 Let's take it step by step. First, we are creating a new branch
@@ -99,4 +112,3 @@ that anymore.
     parent commit hash.  
     **TIP** The hash is actually a `40` character string, but git accepts
     the first `7` characters as a valid hash, which makes it easier to use.
-
