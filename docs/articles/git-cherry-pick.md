@@ -103,12 +103,14 @@ commit, we can specify the range `C2..C6` when executing the pick.
 Finally, we remove the old branch `feature/my-bugfix`, since we won't be needing
 that anymore.
 
+Now you can go ahead and create two new PRs with the new branches.
+
 !!! note "Git Commit Hashes"  
-    `C1`, `C2`, etc.. are git commit hashes.
-    You can find them when looking at your git history with for example `git log`, or
-    via the GitHub web interface. It is basically a pointer to where git can find the
-    bit of code that is part of the commit. It's a `SHA-1` hash that contains the
-    commit message, the author, the date, the files that were changed, as well as the
-    parent commit hash.  
+    `C1`, `C2`, etc.. are refering to `git commit hashes`. In reality, these are
+    `SHA-1` hashes that contain the commit message, the author, the date, the
+    files that were changed, as well as the parent commit hash.  
+    You can find them when looking at your git history with for example `git log`,
+    or via the GitHub web interface. It is basically a pointer to where git can
+    find the bit of code that is part of the commit.
     **TIP** The hash is actually a `40` character string, but git accepts
     the first `7` characters as a valid hash, which makes it easier to use.
