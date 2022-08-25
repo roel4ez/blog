@@ -85,7 +85,7 @@ setup your branches and create two new PRs.
 
 First, identify the hashes of the commits that are part of the first PR:
 
-```bash "Identify the commits that are part of the first PR"
+```bash title="Identify the commits that are part of the first PR"
 $ [feature/my-bugfix] 
     git log --all --decorate --oneline --graph      # Show the commits in this feature branch, in a nicely formatted graph
 ```
@@ -104,7 +104,7 @@ $ [feature/my-bugfix]
 Once you know which commits are impacted and you have the hashes, you can start
 creating your new branches and PRs:
 
-```bash	"Cherry-pick the commits to different branches"
+```bash	title="Cherry-pick the commits to different branches"
 $ [feature/my-bugfix]
     git checkout main
 $ [main]> 
