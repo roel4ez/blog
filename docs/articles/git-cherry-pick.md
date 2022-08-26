@@ -129,3 +129,27 @@ Finally, we remove the old branch `feature/my-bugfix`, since we won't be needing
 that anymore.
 
 Now you can go ahead and create two new PRs with the new branches.
+
+## Common pitfalls and caveats
+
+* Cherry-picking *copies* commits, including the message and the timestamps, and
+applies the same changes to the target branch. This means git has created a new
+commit but leaves the old one around - be aware of this when looking at your git
+history.
+* You can get yourself into trouble if you are not making **small and
+self-contained** changes. The bigger your commits, the more likely there will be
+conflicts.
+* [If the branch that you cherry-picked from is eventually merged into the target
+branch, you will end up with duplicate commits.](https://tlatsas.github.io/2013/07/28/using-git-rebase-to-remove-duplicate-cherry-picked-commits/)
+* cherry-pick does not work well when you don't have the remote branches, or when
+there are still unmerged changes on the target branch. `git fetch` might be able
+to fix some of these issues.
+
+## Next steps
+
+Make sure to read the [official documentation](https://git-scm.com/docs/git-cherry-pick)
+on cherry-picking, as there are a lot more caveats and pitfalls to be aware of.
+If you get into trouble, [StackOverflow](https://stackoverflow.com/questions/tagged/git-cherry-pick) is a good place to look for help. 
+
+Let me know on [Twitter](https://twitter.com/roel4ez) if you have any questions
+or remarks!
