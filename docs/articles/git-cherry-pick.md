@@ -1,15 +1,14 @@
 ---
-title: Using `git cherry-pick` [git 101]
+title: Cherry-picking your commits for smaller Pull Requests
 author: Roel Fauconnier
 author_gh_user: roel4ez
 read_time: 5min
 publish_date: 06-july-2022
 tags:
-    - github
     - git
-    - git-101
     - branching
     - pull-requests
+    - cherry-pick
 ---
 
 This is the first in a series of articles on using the git CLI to be productive
