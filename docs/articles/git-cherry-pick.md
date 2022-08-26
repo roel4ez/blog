@@ -92,7 +92,7 @@ $ [feature/my-bugfix]
 
 !!! note "Git Commit Hashes"  
     `git commit hashes` are `SHA-1` hashes that contain the commit message, the
-    author, the date, the files that were changed, as well as the parent commit
+    author, the date, a complete snapshot of files, as well as the parent commit
     hash.
     You can find them when looking at your git history with for example `git log`,
     or via the GitHub web interface. It is basically a pointer to where git can
