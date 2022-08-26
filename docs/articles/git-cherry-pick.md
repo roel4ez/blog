@@ -3,7 +3,7 @@ title: Cherry-picking your commits for smaller Pull Requests
 author: Roel Fauconnier
 author_gh_user: roel4ez
 read_time: 5min
-publish_date: 06-july-2022
+publish_date: 26-august-2022
 tags:
     - git
     - branching
