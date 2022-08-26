@@ -7,24 +7,24 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="roel4ez">
+        <meta name="author" content="Roel Fauconnier">
       
       
-        <link rel="canonical" href="https://roel4ez.github.io/blog/tags/">
+        <link rel="canonical" href="https://roel4ez.github.io/blog/articles/git-cherry-pick/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>Tags - roel4ez | Blog</title>
+        <title>Using `git cherry-pick` [git 101] - roel4ez | Blog</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -40,13 +40,13 @@
       
     
     
-      <link rel="stylesheet" href="../css/timeago.css">
+      <link rel="stylesheet" href="../../css/timeago.css">
     
-      <link rel="stylesheet" href="../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#creating-a-pull-request" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="roel4ez | Blog" class="md-header__button md-logo" aria-label="roel4ez | Blog" data-md-component="logo">
+    <a href="../.." title="roel4ez | Blog" class="md-header__button md-logo" aria-label="roel4ez | Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -112,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tags
+              Using `git cherry-pick` [git 101]
             
           </span>
         </div>
@@ -211,7 +216,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -226,7 +231,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../articles/github-action-turn-on-off-vm/" class="md-tabs__link">
+      <a href="../github-action-turn-on-off-vm/" class="md-tabs__link">
         Blog
       </a>
     </li>
@@ -236,12 +241,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../../tags/" class="md-tabs__link">
       Tags
     </a>
   </li>
@@ -268,7 +271,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="roel4ez | Blog" class="md-nav__button md-logo" aria-label="roel4ez | Blog" data-md-component="logo">
+    <a href="../.." title="roel4ez | Blog" class="md-nav__button md-logo" aria-label="roel4ez | Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -299,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -340,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../articles/github-action-turn-on-off-vm/" class="md-nav__link">
+      <a href="../github-action-turn-on-off-vm/" class="md-nav__link">
         Github Action for managing Azure VM
       </a>
     </li>
@@ -354,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../articles/mkdocs-mike-ghpages/" class="md-nav__link">
+      <a href="../mkdocs-mike-ghpages/" class="md-nav__link">
         Awesome documentation with mkdocs and GitHub Pages
       </a>
     </li>
@@ -368,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../articles/running-a-project-with-github-projects/" class="md-nav__link">
+      <a href="../running-a-project-with-github-projects/" class="md-nav__link">
         Managing a project with the new GitHub Projects
       </a>
     </li>
@@ -388,19 +391,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
         Tags
       </a>
-      
     </li>
   
 
@@ -423,6 +418,49 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-pull-request" class="md-nav__link">
+    Creating a Pull Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cherries" class="md-nav__link">
+    Cherries 🍒
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-me-the-code" class="md-nav__link">
+    Show me the code 💻
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls-and-caveats" class="md-nav__link">
+    Common pitfalls and caveats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -439,258 +477,166 @@ doesn't, the page title (or respectively site name) is used
 as the main headline.
 -->
 
-    <h1>Tags</h1>
+    <h1>Using `git cherry-pick` [git 101]</h1>
 
 
 <!-- Markdown content -->
 
     
-
+    <aside class="mdx-author">
+        <p>
+        <img src="https://avatars.githubusercontent.com/roel4ez" alt="@roel4ez">
+        </p>
+        <p>
+        <span> 
+        <b>Roel Fauconnier</b> · <a href="https://github.com/roel4ez">@roel4ez</a>
+        </span>
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+            </svg> 06-july-2022 ·
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+            </svg> 5min read
+        </span>
+        </p>
+    </aside>
     
 
-    <p>
-
-<div class="blogging-tags-grid">
+    
+        <div class="tags">
         
-        <a href="https://roel4ez.github.io/blog/tags#github" class="blogging-tag"><code>#github</code></a>
+            <a href="/blog/tags/#github" class="tag"><code>#github</code></a>
         
-        <a href="https://roel4ez.github.io/blog/tags#git" class="blogging-tag"><code>#git</code></a>
+            <a href="/blog/tags/#git" class="tag"><code>#git</code></a>
         
-        <a href="https://roel4ez.github.io/blog/tags#git-101" class="blogging-tag"><code>#git-101</code></a>
+            <a href="/blog/tags/#git-101" class="tag"><code>#git-101</code></a>
         
-        <a href="https://roel4ez.github.io/blog/tags#branching" class="blogging-tag"><code>#branching</code></a>
+            <a href="/blog/tags/#branching" class="tag"><code>#branching</code></a>
         
-        <a href="https://roel4ez.github.io/blog/tags#pull-requests" class="blogging-tag"><code>#pull-requests</code></a>
+            <a href="/blog/tags/#pull-requests" class="tag"><code>#pull-requests</code></a>
         
-        <a href="https://roel4ez.github.io/blog/tags#github-action" class="blogging-tag"><code>#github-action</code></a>
-        
-        <a href="https://roel4ez.github.io/blog/tags#azure" class="blogging-tag"><code>#azure</code></a>
-        
-        <a href="https://roel4ez.github.io/blog/tags#blog" class="blogging-tag"><code>#blog</code></a>
-        
-        <a href="https://roel4ez.github.io/blog/tags#CI" class="blogging-tag"><code>#CI</code></a>
-        
-        <a href="https://roel4ez.github.io/blog/tags#mike" class="blogging-tag"><code>#mike</code></a>
-        
-        <a href="https://roel4ez.github.io/blog/tags#github-projects" class="blogging-tag"><code>#github-projects</code></a>
-        
-        <a href="https://roel4ez.github.io/blog/tags#project-management" class="blogging-tag"><code>#project-management</code></a>
-        
-        <a href="https://roel4ez.github.io/blog/tags#agile" class="blogging-tag"><code>#agile</code></a>
-        
-    </div>
+        </div>
     
 
+    <p>This is the first in a series of articles on using the git CLI to be productive
+in your day-to-day work. Also, when you are really stuck with git, refer to
+<a href="https://ohshitgit.com">https://ohshitgit.com</a> for quick help!</p>
+<h2 id="creating-a-pull-request">Creating a Pull Request</h2>
+<p>One of the requests I've seen OSS repository owners make when reviewing PRs
+is that you use a small number of commits that fixes <strong>one specific issue</strong>.
+Generally, this is a <em>good thing</em>™️, as it makes it easier for the maintainer to
+review the PR and make sure it can be merged without issues. It also facilitates
+rolling back potential regressions that weren't caught by the tests for example.</p>
+<p>So what happens when the feedback on your PR is: </p>
+<blockquote>
+<p>LGTM, but it would be better to separate these changes into two PRs".</p>
+</blockquote>
+<p>Great, now what? 🤔 You've worked so long on this and now you have to do
+ everything again?</p>
+<h2 id="cherries">Cherries 🍒</h2>
+<p>No worries, this is where <code>git cherry-pick</code> comes to the rescue. The <a href="https://git-scm.com/docs/git-cherry-pick">official 
+documentation</a> describes it as <code>"Apply
+the changes introduced by some existing commits"</code>, but how do we use it in
+practice?</p>
+<p>Let's take the following situation for example, where the ask is to make two PRs:
+one that contains commit C1, and one that contains all commits starting from C2.
+How do we get from this:</p>
+<div class="mermaid">gitGraph
+    commit
+    branch feature/my-bugfix
+    checkout feature/my-bugfix
+    commit id: "C1"
+    commit id: "C2"
+    commit id: "C3"
+    commit id: "C4"
+    commit id: "C5"
+    commit id: "C6"
+    checkout main
+    merge feature/my-bugfix</div>
+<p>to this?</p>
+<div class="mermaid">gitGraph
+    commit
+    branch feature/my-bugfix-1
+    checkout feature/my-bugfix-1
+    commit id: "C1"
+    checkout main
+    branch feature/my-bugfix-2
+    checkout feature/my-bugfix-2
+    commit id: "C2"
+    commit id: "C3"
+    commit id: "C4"
+    commit id: "C5"
+    commit id: "C6"
+    checkout main
+    merge feature/my-bugfix-1
+    merge feature/my-bugfix-2</div>
+<h2 id="show-me-the-code">Show me the code 💻</h2>
+<p>So do you have to do everything again? <strong>No</strong>, you can use <code>git cherry-pick</code> to
+setup your branches and create two new PRs.</p>
+<p>First, identify the hashes of the commits that are part of the first PR:</p>
+<div class="highlight"><span class="filename">Identify the commits that are part of the first PR</span><pre><span></span><code>$ <span class="o">[</span>feature/my-bugfix<span class="o">]</span> 
+    git log --all --decorate --oneline --graph      <span class="c1"># Show the commits in this feature branch, in a nicely formatted graph</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Git Commit Hashes</p>
+<p><code>git commit hashes</code> are <code>SHA-1</code> hashes that contain the commit message, the
+author, the date, a complete snapshot of files, as well as the parent commit
+hash.
+You can find them when looking at your git history with for example <code>git log</code>,
+or via the GitHub web interface. It is basically a pointer to where git can
+find the bit of code that is part of the commit.<br />
+<strong>TIP</strong> The hash is actually a <code>40</code> character string, but git accepts
+the first <code>7</code> characters as a valid hash, which makes it easier to use.<br />
+In the below example I'll just use C1, C2 and C3 as hashes.</p>
+</div>
+<p>Once you know which commits are impacted and you have the hashes, you can start
+creating your new branches and PRs:</p>
+<div class="highlight"><span class="filename">Cherry-pick the commits to different branches</span><pre><span></span><code>$ <span class="o">[</span>feature/my-bugfix<span class="o">]</span>
+    git checkout main
+$ <span class="o">[</span>main<span class="o">]</span>&gt; 
+    git checkout -b feature/my-bugfix-1             <span class="c1"># Create a new branch for the C1 changes</span>
+    git cherry-pick C1                              <span class="c1"># Cherry-pick only commit C1</span>
+    git push --set-upstream origin fix/my-bugfix-1  <span class="c1"># Push the branch to the remote</span>
 
+    git checkout main                               <span class="c1"># Switch to main branch, since we want to use the same base branch for the other changes</span>
+    git checkout -b feature/my-bugfix-2             <span class="c1"># Create a new branch for the C2 changes</span>
+    git cherry-pick C2..C6                          <span class="c1"># Cherry-pick commits C2 to C6                </span>
+    git push --set-upstream origin fix/my-bugfix-2  <span class="c1"># Push the branch to the remote</span>
 
-
-<h3 id="github">#github</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/git-cherry-pick/">Using `git cherry-pick` [git 101]</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                8/26/22, 1:02 PM
-            </span>
-        </li>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/running-a-project-with-github-projects/">Managing a project with the new GitHub Projects</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                1/11/22, 7:49 AM
-            </span>
-        </li>
-    
-
-<h3 id="git">#git</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/git-cherry-pick/">Using `git cherry-pick` [git 101]</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                8/26/22, 1:02 PM
-            </span>
-        </li>
-    
-
-<h3 id="git-101">#git-101</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/git-cherry-pick/">Using `git cherry-pick` [git 101]</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                8/26/22, 1:02 PM
-            </span>
-        </li>
-    
-
-<h3 id="branching">#branching</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/git-cherry-pick/">Using `git cherry-pick` [git 101]</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                8/26/22, 1:02 PM
-            </span>
-        </li>
-    
-
-<h3 id="pull-requests">#pull-requests</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/git-cherry-pick/">Using `git cherry-pick` [git 101]</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                8/26/22, 1:02 PM
-            </span>
-        </li>
-    
-
-<h3 id="github-action">#github-action</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/github-action-turn-on-off-vm/">Github Action for managing Azure VM</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                12/24/21, 9:36 AM
-            </span>
-        </li>
-    
-
-<h3 id="azure">#azure</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/github-action-turn-on-off-vm/">Github Action for managing Azure VM</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                12/24/21, 9:36 AM
-            </span>
-        </li>
-    
-
-<h3 id="blog">#blog</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/mkdocs-mike-ghpages/">Awesome documentation with mkdocs and GitHub Pages</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                12/24/21, 11:27 AM
-            </span>
-        </li>
-    
-
-<h3 id="CI">#CI</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/mkdocs-mike-ghpages/">Awesome documentation with mkdocs and GitHub Pages</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                12/24/21, 11:27 AM
-            </span>
-        </li>
-    
-
-<h3 id="mike">#mike</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/mkdocs-mike-ghpages/">Awesome documentation with mkdocs and GitHub Pages</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                12/24/21, 11:27 AM
-            </span>
-        </li>
-    
-
-<h3 id="github-projects">#github-projects</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/running-a-project-with-github-projects/">Managing a project with the new GitHub Projects</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                1/11/22, 7:49 AM
-            </span>
-        </li>
-    
-
-<h3 id="project-management">#project-management</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/running-a-project-with-github-projects/">Managing a project with the new GitHub Projects</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                1/11/22, 7:49 AM
-            </span>
-        </li>
-    
-
-<h3 id="agile">#agile</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://roel4ez.github.io/blog/articles/running-a-project-with-github-projects/">Managing a project with the new GitHub Projects</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                1/11/22, 7:49 AM
-            </span>
-        </li>
-    
-</p>
+    git push origin --delete feature/my-bugfix      <span class="c1"># delete the old branch remotely</span>
+    git branch -d feature/my-bugfix                 <span class="c1"># delete the old branch locally</span>
+</code></pre></div>
+<p>Let's take it step by step. First, we are creating a new branch
+<code>feature/my-bugfix-1</code> and cherry-picking the commit <code>C1</code> into it. Then
+we do the same for <code>feature/my-bugfix-2</code>, but instead of cherry-picking each
+commit, we can specify the range <code>C2..C6</code> when executing the pick.
+Finally, we remove the old branch <code>feature/my-bugfix</code>, since we won't be needing
+that anymore.</p>
+<p>Now you can go ahead and create two new PRs with the new branches.</p>
+<h2 id="common-pitfalls-and-caveats">Common pitfalls and caveats</h2>
+<ul>
+<li>Cherry-picking <em>copies</em> commits, including the message and the timestamps, and
+applies the same changes to the target branch. This means git has created a new
+commit but leaves the old one around - be aware of this when looking at your git
+history.</li>
+<li>You can get yourself into trouble if you are not making <strong>small and
+self-contained</strong> changes. The bigger your commits, the more likely there will be
+conflicts.</li>
+<li><a href="https://tlatsas.github.io/2013/07/28/using-git-rebase-to-remove-duplicate-cherry-picked-commits/">If the branch that you cherry-picked from is eventually merged into the target
+branch, you will end up with duplicate commits.</a></li>
+<li>cherry-pick does not work well when you don't have the remote branches, or when
+there are still unmerged changes on the target branch. <code>git fetch</code> might be able
+to fix some of these issues.</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>Make sure to read the <a href="https://git-scm.com/docs/git-cherry-pick">official documentation</a>
+on cherry-picking, as there are a lot more caveats and pitfalls to be aware of.
+If you get into trouble, <a href="https://stackoverflow.com/questions/tagged/git-cherry-pick">StackOverflow</a> is a good place to look for help. </p>
+<p>Let me know on <a href="https://twitter.com/roel4ez">Twitter</a> if you have any questions
+or remarks!</p>
 
     <!-- Last update of source file -->
     
@@ -700,11 +646,11 @@ as the main headline.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-23T20:03:14+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-08-26T13:02:06+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-08-26</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-12-23T18:21:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-12-23</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-07-06T12:14:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-06</span>
       
     
   </small>
@@ -714,8 +660,6 @@ as the main headline.
 
 
     <!-- Get setting from mkdocs.yml, but allow page-level overrides -->
-    
-    
     
     
 
@@ -737,27 +681,6 @@ as the main headline.
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../articles/running-a-project-with-github-projects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Managing a project with the new GitHub Projects" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Managing a project with the new GitHub Projects
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -799,16 +722,16 @@ as the main headline.
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../js/timeago.min.js"></script>
+        <script src="../../js/timeago.min.js"></script>
       
-        <script src="../js/timeago_mkdocs_material.js"></script>
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
-        <script src="../javascript/extra.js"></script>
+        <script src="../../javascript/extra.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
       

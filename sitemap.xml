@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://roel4ez.github.io/blog/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://roel4ez.github.io/blog/tags/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://roel4ez.github.io/blog/articles/git-cherry-pick/</loc>
+         <lastmod>2022-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://roel4ez.github.io/blog/articles/github-action-turn-on-off-vm/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://roel4ez.github.io/blog/articles/mkdocs-mike-ghpages/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://roel4ez.github.io/blog/articles/running-a-project-with-github-projects/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
