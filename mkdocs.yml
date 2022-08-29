@@ -86,6 +86,7 @@ nav:
     - articles/github-action-turn-on-off-vm.md
     - articles/mkdocs-mike-ghpages.md
     - articles/running-a-project-with-github-projects.md
+    - articles/git-cherry-pick.md
   - tags.md
 
 extra:
