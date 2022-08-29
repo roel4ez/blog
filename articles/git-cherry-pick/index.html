@@ -625,7 +625,8 @@ practice?</p>
 <p>Let's take the following situation for example, where the ask is to make two PRs:
 one that contains commit C1, and one that contains all commits starting from C2.
 How do we get from this:</p>
-<div class="mermaid">gitGraph
+<pre class="mermaid"><code>%%{init: {'theme':'base'}}%%
+gitGraph
     commit
     branch feature/my-bugfix
     checkout feature/my-bugfix
@@ -636,9 +637,10 @@ How do we get from this:</p>
     commit id: "C5"
     commit id: "C6"
     checkout main
-    merge feature/my-bugfix</div>
+    merge feature/my-bugfix</code></pre>
 <p>to this?</p>
-<div class="mermaid">gitGraph
+<pre class="mermaid"><code>%%{init: {'theme':'base'}}%%
+gitGraph
     commit
     branch feature/my-bugfix-1
     checkout feature/my-bugfix-1
@@ -653,7 +655,7 @@ How do we get from this:</p>
     commit id: "C6"
     checkout main
     merge feature/my-bugfix-1
-    merge feature/my-bugfix-2</div>
+    merge feature/my-bugfix-2</code></pre>
 <h2 id="show-me-the-code">Show me the code 💻</h2>
 <p>So do you have to do everything again? <strong>No</strong>, you can use <code>git cherry-pick</code> to
 setup your branches and create two new PRs.</p>
@@ -727,7 +729,7 @@ or remarks!</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-08-26T13:08:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-08-26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-08-29T07:05:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-08-29</span>
       
         <br>
         Created:
