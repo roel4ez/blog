@@ -41,7 +41,8 @@ Let's take the following situation for example, where the ask is to make two PRs
 one that contains commit C1, and one that contains all commits starting from C2.
 How do we get from this:
 
-```mermaid
+``` mermaid
+%%{init: {'theme':'base'}}%%
 gitGraph
     commit
     branch feature/my-bugfix
@@ -58,7 +59,8 @@ gitGraph
 
 to this?
     
-```mermaid
+``` mermaid
+%%{init: {'theme':'base'}}%%
 gitGraph
     commit
     branch feature/my-bugfix-1
