@@ -660,8 +660,8 @@ gitGraph
 <p>So do you have to do everything again? <strong>No</strong>, you can use <code>git cherry-pick</code> to
 setup your branches and create two new PRs.</p>
 <p>First, identify the hashes of the commits that are part of the first PR:</p>
-<div class="highlight"><span class="filename">Identify the commits that are part of the first PR</span><pre><span></span><code>$ <span class="o">[</span>feature/my-bugfix<span class="o">]</span> 
-    git log --all --decorate --oneline --graph      <span class="c1"># Show the commits in this feature branch, in a nicely formatted graph</span>
+<div class="highlight"><span class="filename">Identify the commits that are part of the first PR</span><pre><span></span><code>$<span class="w"> </span><span class="o">[</span>feature/my-bugfix<span class="o">]</span><span class="w"> </span>
+<span class="w">    </span>git<span class="w"> </span>log<span class="w"> </span>--all<span class="w"> </span>--decorate<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w">      </span><span class="c1"># Show the commits in this feature branch, in a nicely formatted graph</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Git Commit Hashes</p>
@@ -677,20 +677,20 @@ In the below example I'll just use C1, C2 and C3 as hashes.</p>
 </div>
 <p>Once you know which commits are impacted and you have the hashes, you can start
 creating your new branches and PRs:</p>
-<div class="highlight"><span class="filename">Cherry-pick the commits to different branches</span><pre><span></span><code>$ <span class="o">[</span>feature/my-bugfix<span class="o">]</span>
-    git checkout main
-$ <span class="o">[</span>main<span class="o">]</span>&gt; 
-    git checkout -b feature/my-bugfix-1             <span class="c1"># Create a new branch for the C1 changes</span>
-    git cherry-pick C1                              <span class="c1"># Cherry-pick only commit C1</span>
-    git push --set-upstream origin fix/my-bugfix-1  <span class="c1"># Push the branch to the remote</span>
+<div class="highlight"><span class="filename">Cherry-pick the commits to different branches</span><pre><span></span><code>$<span class="w"> </span><span class="o">[</span>feature/my-bugfix<span class="o">]</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+$<span class="w"> </span><span class="o">[</span>main<span class="o">]</span>&gt;<span class="w"> </span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/my-bugfix-1<span class="w">             </span><span class="c1"># Create a new branch for the C1 changes</span>
+<span class="w">    </span>git<span class="w"> </span>cherry-pick<span class="w"> </span>C1<span class="w">                              </span><span class="c1"># Cherry-pick only commit C1</span>
+<span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>fix/my-bugfix-1<span class="w">  </span><span class="c1"># Push the branch to the remote</span>
 
-    git checkout main                               <span class="c1"># Switch to main branch, since we want to use the same base branch for the other changes</span>
-    git checkout -b feature/my-bugfix-2             <span class="c1"># Create a new branch for the C2 changes</span>
-    git cherry-pick C2..C6                          <span class="c1"># Cherry-pick commits C2 to C6                </span>
-    git push --set-upstream origin fix/my-bugfix-2  <span class="c1"># Push the branch to the remote</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>main<span class="w">                               </span><span class="c1"># Switch to main branch, since we want to use the same base branch for the other changes</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/my-bugfix-2<span class="w">             </span><span class="c1"># Create a new branch for the C2 changes</span>
+<span class="w">    </span>git<span class="w"> </span>cherry-pick<span class="w"> </span>C2..C6<span class="w">                          </span><span class="c1"># Cherry-pick commits C2 to C6                </span>
+<span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>fix/my-bugfix-2<span class="w">  </span><span class="c1"># Push the branch to the remote</span>
 
-    git push origin --delete feature/my-bugfix      <span class="c1"># delete the old branch remotely</span>
-    git branch -d feature/my-bugfix                 <span class="c1"># delete the old branch locally</span>
+<span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>feature/my-bugfix<span class="w">      </span><span class="c1"># delete the old branch remotely</span>
+<span class="w">    </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/my-bugfix<span class="w">                 </span><span class="c1"># delete the old branch locally</span>
 </code></pre></div>
 <p>Let's take it step by step. First, we are creating a new branch
 <code>feature/my-bugfix-1</code> and cherry-picking the commit <code>C1</code> into it. Then

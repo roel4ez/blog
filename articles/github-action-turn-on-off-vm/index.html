@@ -566,16 +566,16 @@ it incurs a considerate costs if it is just idling away.</p>
 <p>To enable this functionality, I created a reusable GitHub Action that can be
 integrated in any other pipeline: <a href="https://github.com/marketplace/actions/power-on-off-or-deallocate-a-specific-azure-vm">Power ON/OFF or DEALLOCATE a specific Azure VM</a></p>
 <p>It is very easy to use, just add step to any job in your Action:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Power Azure VM</span><span class="w"></span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">roel4ez/action-power-on-off-azure-vm@v1.0.1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_VM_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;VM_NAME&gt;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_RG_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;RESOURCE_GROUP_NAME&gt;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">POWER_SWITCH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;ON/OFFDEALLOCATE&gt;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_SP_CLIENTID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_CLIENTID }}</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_SP_SECRET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_SECRET }}</span><span class="w"></span>
-<span class="w">        </span><span class="nt">AZURE_TENANTID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_TENANTID }}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Power Azure VM</span>
+<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">roel4ez/action-power-on-off-azure-vm@v1.0.1</span>
+<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">AZURE_VM_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;VM_NAME&gt;</span>
+<span class="w">        </span><span class="nt">AZURE_RG_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;RESOURCE_GROUP_NAME&gt;</span>
+<span class="w">        </span><span class="nt">POWER_SWITCH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;ON/OFFDEALLOCATE&gt;</span>
+<span class="w">        </span><span class="nt">AZURE_SP_CLIENTID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_CLIENTID }}</span>
+<span class="w">        </span><span class="nt">AZURE_SP_SECRET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_SP_SECRET }}</span>
+<span class="w">        </span><span class="nt">AZURE_TENANTID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AZURE_TENANTID }}</span>
 </code></pre></div>
 <p>For more info, refer to the <a href="https://github.com/marketplace/actions/power-on-off-or-deallocate-a-specific-azure-vm">README</a> or have a look at the <a href="https://github.com/roel4ez/action-power-on-off-azure-vm">code</a> yourself.
 Let me know what you think!</p>

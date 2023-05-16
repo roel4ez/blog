@@ -721,9 +721,9 @@ documentation with mkdocs and mkdocs-material. Later we'll have a look at using
 whole thing. So go ahead and <a href="https://realpython.com/installing-python/">install that</a>
 and also install <a href="https://pip.pypa.io/en/stable/installation/">pip</a> while you are
 at it. Once you have this, you can install the prerequisites:</p>
-<div class="highlight"><pre><span></span><code>- pip install mkdocs
-- pip install mkdocs-material
-- pip install mike
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+-<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+-<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mike
 </code></pre></div>
 <p>There will be a couple of other extensions and plugins that you can use, and it
 probably makes sense to manage that in a <a href="https://pip.pypa.io/en/latest/reference/requirements-file-format/">requirements.txt</a> file.</p>
@@ -735,14 +735,14 @@ maintained and managed individually (e.g. permissions). You do not need to setup
 a new GitHub repository for that, you can instead create a <a href="https://stackoverflow.com/questions/19980631/what-is-git-checkout-orphan-used-for">detached branch</a>
 or <a href="https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnewbranchgt">orphan branch</a>
 , called <code>docs/main</code> for example:</p>
-<div class="highlight"><pre><span></span><code>git checkout docs/main --orphan
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>docs/main<span class="w"> </span>--orphan
 </code></pre></div>
 <p>If you want to have <code>dev</code> branch and <code>docs</code> branch side by side, try out 
 git worktree</p>
-<div class="highlight"><span class="filename">git worktree</span><pre><span></span><code>git checkout docs/main
+<div class="highlight"><span class="filename">git worktree</span><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>docs/main
 
 <span class="c1"># from the working folder:</span>
-git worktree add c:/path-to-sources/repository.docs docs/main
+git<span class="w"> </span>worktree<span class="w"> </span>add<span class="w"> </span>c:/path-to-sources/repository.docs<span class="w"> </span>docs/main
 </code></pre></div>
 <h2 id="get-started">Get started</h2>
 <p>For theming the documentation, I'm using <a href="https://squidfunk.github.io/mkdocs-material/">mkdocs-material</a>.
@@ -763,23 +763,23 @@ container out-of-the-box, you have two ways to deal with this:  </p>
 <li>Create a <a href="https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker">custom docker image</a> with the plugin installed:  </li>
 </ol>
 <div class="highlight"><span class="filename">Dockerfile</span><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">squidfunk/mkdocs-material</span>
-<span class="k">RUN</span><span class="w"> </span>pip install mdx_truly_sane_lists
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mdx_truly_sane_lists
 
 <span class="c"># or copy your requirements.txt</span>
-<span class="k">COPY</span><span class="w"> </span>requirements.txt .
-<span class="k">RUN</span><span class="w"> </span>pip install -r requirements.txt
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
 <div class="highlight"><span class="filename">Build and run container</span><pre><span></span><code><span class="c1"># in the directory where your dockerfile is</span>
-docker build . -t mkdocs-material-with-extensions
-docker run --rm -it -p <span class="m">8000</span>:8000 -v <span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>:/docs mkdocs-material-with-extensions
+docker<span class="w"> </span>build<span class="w"> </span>.<span class="w"> </span>-t<span class="w"> </span>mkdocs-material-with-extensions
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>:/docs<span class="w"> </span>mkdocs-material-with-extensions
 </code></pre></div>
 </div>
 <!-- markdownlint-enable MD046 -->
 
 <h4 id="alternate-approach">Alternate approach</h4>
 <p>Install Python and pip, and then the required packages:</p>
-<div class="highlight"><pre><span></span><code>pip install -r requirements.txt
-mkdocs serve
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+mkdocs<span class="w"> </span>serve
 </code></pre></div>
 <h3 id="configuration">Configuration</h3>
 <p>The file <code>mkdocs.yml</code> provides the main configuration for the website, such as 
